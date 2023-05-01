@@ -1,0 +1,274 @@
+/* Shared Site */
+:root {
+  --main-color: #f25454;
+  --paragraph-color: #666;
+  --progress-color: #444;
+  --anchurs-color: #b0b0b0;
+}
+
+@font-face {
+  font-family: "poppins700";
+  src: url(../Fonts/Poppins/Poppins-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "OpenSans500";
+  src: url(../Fonts/OpenSans/OpenSans-SemiBold.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "opensans400";
+  src: url(../Fonts/OpenSans/OpenSans-Medium.ttf);
+}
+
+button {
+  font-family: "opensans400";
+}
+
+body {
+  font-family: "OpenSans500";
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "poppins700";
+}
+
+.header_all p {
+  text-align: center;
+  color: #999;
+}
+
+.header_all h2 {
+  font-size: 2.6rem;
+}
+
+.header_all h2::after {
+  content: attr(data-bigletter);
+  font-size: 5.2rem;
+  color: gray;
+  opacity: 0.08;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -39%);
+  z-index: -1;
+}
+
+.header_all h2::before {
+  content: "";
+  width: 2.4rem;
+  height: 1.2px;
+  background-color: black;
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s;
+}
+
+.header_all:hover h2::before {
+  width: 3.2rem;
+}
+
+/* End site */
+/* Start Of NavBar SECTION */
+/* End Of NavBar SECTION */
+/* Start Of Home SECTION  */
+#home {
+  background-image: url(../images/slideshow-1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.settings {
+  top: 20%;
+}
+
+.mouse {
+  width: 1.87rem;
+  height: 2.7rem;
+  border: 1px solid white;
+  border-radius: 6.25rem;
+  bottom: 20%;
+  position: relative;
+}
+
+.mouse::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: move 5s infinite;
+}
+
+@keyframes move {
+  0% {
+    opacity: 1;
+    top: 5%;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  60% {
+    top: 60%;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* End Of Home SECTION  */
+/* Start Of About SECTION  */
+#about p {
+  color: var(--paragraph-color);
+  font-size: 0.95rem;
+}
+
+.skill {
+  color: var(--progress-color);
+}
+
+.progress {
+  height: 4px;
+}
+
+.progress-bar {
+  width: 80%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-95 {
+  width: 95%;
+}
+
+.w-85 {
+  width: 85%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+/* End Of About SECTION  */
+/* Start Of Team SECTION  */
+#team .member p {
+  color: var(--paragraph-color);
+}
+.img_member .layer {
+  opacity: 0;
+  transition: all 0.3s;
+}
+.img_member:hover .layer {
+  opacity: 0.8;
+}
+.img_member .layer .content_layer {
+  transform: translateY(20%);
+  transition: all 0.3s;
+}
+.img_member:hover .content_layer {
+  transform: translateY(0);
+}
+.img_member img {
+  transition: all 0.3s;
+}
+.img_member:hover img {
+  transform: scale(1.12);
+}
+/* End Of Team SECTION  */
+
+/* Start Of Info SECTION  */
+#info .btn,
+#contact .btn {
+  background: var(--main-color);
+  transition: all 0.5s;
+}
+
+#contact .btn:hover {
+  background-color: var(--main-color);
+  opacity: 0.6;
+}
+
+/* End Of Info SECTION  */
+/* Start Of services SECTION  */
+.single-serv p {
+  color: var(--paragraph-color);
+  font-size: 0.9rem;
+}
+
+.single-serv i {
+  color: var(--main-color);
+}
+
+.single-serv h5 {
+  transition: all 0.3s;
+}
+
+.single-serv:hover h5 {
+  color: var(--main-color);
+}
+
+/* End Of services SECTION  */
+/* Start Of Clients SECTION  */
+.carousel-inner i,
+p {
+  color: var(--paragraph-color);
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 6rem;
+  height: 12rem;
+  background-color: white;
+  text-indent: 0;
+}
+
+/* End Of Clients SECTION  */
+/* Start Of Get in SECTION  */
+#contact .form-floating > .form-control,
+.form-floating > .form-control-plaintext,
+.form-floating > .form-select {
+  height: 6.25rem;
+}
+
+/* End Of Get in SECTION  */
+/* Start Of Footer SECTION  */
+#footer {
+  background-color: #222;
+  background-image: url(../images/dotted-map.png);
+}
+
+#footer a {
+  color: var(--anchurs-color);
+  transition: all 0.5s;
+}
+
+#footer a:hover {
+  color: var(--main-color);
+}
+#floatingTextarea {
+  resize: none;
+}
+.info-tages {
+  cursor: pointer;
+}
+/* Start Of Footer SECTION  */
+/* Start Of Final SECTION  */
+#end {
+  background-color: #1a1a1a;
+}
